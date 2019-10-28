@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Ordens de Serviço</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body ng-app="app">
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Ordens de Serviço</a>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sair</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <ng-include src="'views/menu.html'"></ng-include>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+        <ui-view></ui-view>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.23/angular-ui-router.min.js"></script>
+
+  <!-- Geral -->
+  <script src="app/index.js"></script>
+  <script src="app/dialog.builder.service.js"></script>
+
+  <!-- Clientes -->
+  <script src="app/clientes/service.js"></script>
+  <script src="app/clientes/list.controller.js"></script>
+  <script src="app/clientes/form.controller.js"></script>
+
+  <!-- Ordens de Serviço -->
+  <script src="app/ordens/service.js"></script>
+  <script src="app/ordens/list.controller.js"></script>
+  <script src="app/ordens/form.controller.js"></script>
+</body>
+
+</html>
